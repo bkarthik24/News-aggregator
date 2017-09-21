@@ -1,3 +1,8 @@
+
+
+#COMMENT TO CHECK THE CODE UPDATED IN GITHUB
+
+
 from django.shortcuts import render
 import feedparser
 import requests
