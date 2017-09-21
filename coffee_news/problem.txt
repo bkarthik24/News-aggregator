@@ -1,0 +1,9 @@
+List of bugs:
+
+
+
+
+
+Possible function parameters:
+1)topstories_rss_url
+2)Page name is the another variable.

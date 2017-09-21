@@ -1,0 +1,75 @@
+<!--DOCTYPE-->
+<html>
+	<body>
+		<div>
+		</br>
+		</br>
+		<style>
+		div.header{
+			margin-left:120px;
+			font-size:20px;
+		}
+		div.container {
+		color: white;
+		margin: 20px 20px 20px 20px;
+		padding: 20px;
+		background-color:white;
+		text-align:center;
+		}
+		div.news_title {
+			clear: both;
+			display: inline-block;
+			overflow: hidden;
+			white-space:nowrap;
+			background-color:white;
+			align:center;
+			height:300px;
+			width:300px;
+		}
+		.content_link{
+			margin-left:10px;
+			font-family:"Comic Sans MS", cursive, sans-serif;
+			margin-top:5px;
+			text-decoration:none;
+			color:black;
+			font-size:17px;	
+			display:block;
+		}
+		.nav_link{
+			margin-left:180px;
+			text-decoration:none;
+		}
+		.nav_adjacent{
+			margin-left:40px;
+			text-decoration:none;
+		}
+		.image_link{
+			margin-left:10px;
+			text-decoration:none;
+		}
+		</style>
+		<header>
+		<div class="header">
+		<nav>
+		<a href="/aggregator/topstories" class="nav_link">Top Stories</a>
+		<a href="/aggregator/worldnews" class="nav_adjacent">World</a>
+		<a href="/aggregator/sportsnews"  class="nav_adjacent">Sports</a>
+		<a href="/aggregator/businessnews" class="nav_adjacent">Business</a>
+		<a href="/aggregator/technews" class="nav_adjacent">Technology</a>
+		<a href="/aggregator/entertainment" class="nav_adjacent">Entertainment</a>
+		</nav>
+		</div>
+		</header>
+		</br>
+		</br>
+			<div class="container">
+			{%for key,value in sports.iteritems%}
+				<div class="news_title">
+						<a href={{value.1}} class="image_link"><img src={{value.2}} alt="Smiley face" height="200" width="200"></a>
+						<a href={{value.1}} class="content_link">{{value.0| wordwrap:30 |linebreaks}}</a>
+				</div>
+			{%endfor%}
+			</div>
+		</div>
+		</body>	
+	</html>
